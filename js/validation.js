@@ -69,5 +69,5 @@ const onEscapeDown = (evt) => {
   }
 };
 
-inputHashtag.addEventListener('keydown', onEscapeDown)
-inputComment.addEventListener('keydown', onEscapeDown)
+inputHashtag.addEventListener('keydown', onEscapeDown);
+inputComment.addEventListener('keydown', onEscapeDown);

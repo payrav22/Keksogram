@@ -1,7 +1,7 @@
 const Urls = {
   GET: 'https://22.javascript.pages.academy/kekstagram/data',
   POST: 'https://22.javascript.pages.academy/kekstagram',
-}
+};
 
 const request = (onSuccess, onError, method, data) => {
   fetch(Urls[method],
@@ -15,8 +15,8 @@ const request = (onSuccess, onError, method, data) => {
     })
     .catch(() => {
       onError()
-    })
-}
+    });
+};
 
 export { request }
 

@@ -15,7 +15,7 @@ let photos = [];
 const removeActiveClass = () => {
   let activeFilter = document.querySelector('.img-filters__button--active');
   activeFilter.classList.remove('img-filters__button--active');
-}
+};
 
 const removePhotos = () => {
   const images = document.querySelectorAll('.picture');
@@ -24,7 +24,7 @@ const removePhotos = () => {
       element.remove();
     });
   }
-}
+};
 
 const filters = {
   'filter-default': () => {
@@ -39,17 +39,17 @@ const filters = {
       return b.comments.length - a.comments.length;
     }))
   },
-}
+};
 
 const onSuccess = (data) => {
   filter.classList.remove('img-filters--inactive');
   photos = data.slice()
   renderPhotos(photos.slice(0, DEFAULT_PREVIEW_LOAD))
-}
+};
 
 const onError = () => {
   showError('Ошибка загрузки, попробуйте еще раз', 'Закрыть')
-}
+};
 
 request(onSuccess, onError, 'GET')
 
@@ -60,8 +60,8 @@ const onFilterClick = debounce((evt) => {
     evt.target.classList.add('img-filters__button--active')
     filters[evt.target.id]()
   }
-})
+});
 
-filter.addEventListener('click', onFilterClick)
+filter.addEventListener('click', onFilterClick);
 
 

@@ -62,7 +62,7 @@ const renderComments = (comments) => {
     commentsLoader.addEventListener('click', onCommentsLoaderClick, { once: true })
   } else {
     commentsLoader.classList.add('hidden');
-  };
+  }
 
   commentsCount += COMMENTS_LOAD_STEP;
 };
